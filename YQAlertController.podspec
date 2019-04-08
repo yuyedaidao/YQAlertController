@@ -31,14 +31,15 @@ Pod::Spec.new do |s|
   s.source_files = 'YQAlertController/Classes/**/*'
   
   s.resource_bundles = {
-    'YQAlertController' => ['YQAlertController/Assets/*.png']
+    'YQAlertController' => ['YQAlertController/Assets/*']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   # s.dependency 'Moya/RxSwift', '~> 12.0'
-  # s.dependency 'SnapKit', '~> 4.0.0'
+  s.dependency 'SnapKit', '~> 4.0.0'
   # s.dependency 'RxCoreData', '~> 0.5.1'
   # s.dependency 'RxDataSources', '~> 3.0'
+  s.dependency  'SwiftPopup'
 end

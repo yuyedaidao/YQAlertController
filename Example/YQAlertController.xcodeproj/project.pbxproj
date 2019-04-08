@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		553CF2CF225B3BA500CE2D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553CF2CE225B3BA500CE2D27 /* Assets.xcassets */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -30,6 +31,10 @@
 /* Begin PBXFileReference section */
 		0385B527515B8384AF38C8AE /* Pods-YQAlertController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQAlertController_Example.release.xcconfig"; path = "Target Support Files/Pods-YQAlertController_Example/Pods-YQAlertController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		51E1C808DA64766EA290DE3D /* Pods-YQAlertController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQAlertController_Example.debug.xcconfig"; path = "Target Support Files/Pods-YQAlertController_Example/Pods-YQAlertController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		553CF2CE225B3BA500CE2D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55EC456D225AE73900A67D5C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		55EC4570225AE73900A67D5C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		55EC4574225AE7A600A67D5C /* YQAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YQAlertController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* YQAlertController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQAlertController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,9 +49,9 @@
 		80830C9947B204F27EB78F59 /* Pods-YQAlertController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQAlertController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-YQAlertController_Tests/Pods-YQAlertController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0CC49AECAA0B0FAE1F8F27 /* Pods_YQAlertController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YQAlertController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38EA3FEA418D1BBD6B108DA /* Pods_YQAlertController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YQAlertController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABF7ECFAC69034467A89DAEB /* YQAlertController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = YQAlertController.podspec; path = ../YQAlertController.podspec; sourceTree = "<group>"; };
-		AEFD9398999ECC0140C3C5EC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		B0FAC46AE4E380530EF3CE07 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		ABF7ECFAC69034467A89DAEB /* YQAlertController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YQAlertController.podspec; path = ../YQAlertController.podspec; sourceTree = "<group>"; };
+		AEFD9398999ECC0140C3C5EC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B0FAC46AE4E380530EF3CE07 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +74,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55EC456B225AE73900A67D5C /* YQAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				55EC456C225AE73900A67D5C /* Classes */,
+				55EC456F225AE73900A67D5C /* Assets */,
+			);
+			name = YQAlertController;
+			path = ../YQAlertController;
+			sourceTree = "<group>";
+		};
+		55EC456C225AE73900A67D5C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				55EC456D225AE73900A67D5C /* .gitkeep */,
+				55EC4574225AE7A600A67D5C /* YQAlertController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		55EC456F225AE73900A67D5C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				553CF2CE225B3BA500CE2D27 /* Assets.xcassets */,
+				55EC4570225AE73900A67D5C /* .gitkeep */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				55EC456B225AE73900A67D5C /* YQAlertController */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for YQAlertController */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -147,7 +181,6 @@
 				80830C9947B204F27EB78F59 /* Pods-YQAlertController_Tests.debug.xcconfig */,
 				6641791537E60305A7DC72FD /* Pods-YQAlertController_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,10 +246,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = QXPHWM9EW2;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = QXPHWM9EW2;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +262,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -248,6 +284,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				553CF2CF225B3BA500CE2D27 /* Assets.xcassets in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,10 +328,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YQAlertController_Example/Pods-YQAlertController_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftPopup/SwiftPopup.framework",
 				"${BUILT_PRODUCTS_DIR}/YQAlertController/YQAlertController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPopup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YQAlertController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
