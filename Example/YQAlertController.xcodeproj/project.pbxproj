@@ -32,6 +32,7 @@
 		0385B527515B8384AF38C8AE /* Pods-YQAlertController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQAlertController_Example.release.xcconfig"; path = "Target Support Files/Pods-YQAlertController_Example/Pods-YQAlertController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		51E1C808DA64766EA290DE3D /* Pods-YQAlertController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQAlertController_Example.debug.xcconfig"; path = "Target Support Files/Pods-YQAlertController_Example/Pods-YQAlertController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		553CF2CE225B3BA500CE2D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		553CF2D0225B439C00CE2D27 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		55EC456D225AE73900A67D5C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		55EC4570225AE73900A67D5C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		55EC4574225AE7A600A67D5C /* YQAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YQAlertController.swift; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 			children = (
 				55EC456D225AE73900A67D5C /* .gitkeep */,
 				55EC4574225AE7A600A67D5C /* YQAlertController.swift */,
+				553CF2D0225B439C00CE2D27 /* ImageExtension.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

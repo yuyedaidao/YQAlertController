@@ -151,9 +151,8 @@ public class YQAlertController: SwiftPopup {
             button.setTitle(title, for: .selected)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 13)
             button.setTitleColor(UIColor.darkGray, for: .normal)
-            let bundle = Bundle(for: YQAlertContainer.classForCoder())
-            button.setImage(UIImage(named: "radio-normal", in: bundle, compatibleWith: nil), for: .normal)
-            button.setImage(UIImage(named: "radio-select", in: bundle, compatibleWith: nil), for: .selected)
+            button.setImage(UIImage.named("radio-normal"), for: .normal)
+            button.setImage(UIImage.named("radio-select"), for: .selected)
             button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
             containerView.add(button)
             button.tag = flagIndex

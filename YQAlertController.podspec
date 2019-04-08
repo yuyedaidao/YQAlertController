@@ -42,4 +42,5 @@ Pod::Spec.new do |s|
   # s.dependency 'RxCoreData', '~> 0.5.1'
   # s.dependency 'RxDataSources', '~> 3.0'
   s.dependency  'SwiftPopup'
+
 end
