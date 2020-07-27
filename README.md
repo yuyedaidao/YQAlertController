@@ -7,6 +7,8 @@
 
 ## Example
 
+![example](https://github.com/yuyedaidao/YQAlertController/blob/master/Example/IMG_A53288E4E833-1.jpeg)
+
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
