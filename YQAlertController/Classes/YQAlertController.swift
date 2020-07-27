@@ -61,6 +61,8 @@ public class YQAlertController: SwiftPopup {
     public var adjustOffsetWhenKeyboardShown = true
     public var spaceToKeyboard: CGFloat = 20
     
+    /// 视图展示前(viewDidLoad中)是否增加取消按钮
+    public var appendCancelButton = true
     private let keyboardMan = KeyboardMan()
     
     var alertTitle: String? = nil
@@ -94,7 +96,7 @@ public class YQAlertController: SwiftPopup {
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        if let item = items.last?.item {
+        if appendCancelButton, let item = items.last?.item {
             switch item {
             case .button(_ , _):
                 break
