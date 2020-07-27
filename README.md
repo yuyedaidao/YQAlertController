@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/YQAlertController.svg?style=flat)](https://cocoapods.org/pods/YQAlertController)
 
 ## Example
-
+`AlertController` allowed custom
 ![example](https://github.com/yuyedaidao/YQAlertController/blob/master/Example/IMG_A53288E4E833-1.jpeg)
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
