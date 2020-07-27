@@ -50,7 +50,7 @@
 		80830C9947B204F27EB78F59 /* Pods-YQAlertController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQAlertController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-YQAlertController_Tests/Pods-YQAlertController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0CC49AECAA0B0FAE1F8F27 /* Pods_YQAlertController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YQAlertController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38EA3FEA418D1BBD6B108DA /* Pods_YQAlertController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YQAlertController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABF7ECFAC69034467A89DAEB /* YQAlertController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YQAlertController.podspec; path = ../YQAlertController.podspec; sourceTree = "<group>"; };
+		ABF7ECFAC69034467A89DAEB /* YQAlertController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YQAlertController.podspec; path = ../YQAlertController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AEFD9398999ECC0140C3C5EC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B0FAC46AE4E380530EF3CE07 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -535,7 +535,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gdxt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -550,7 +550,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gdxt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

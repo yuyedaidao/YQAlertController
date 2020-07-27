@@ -169,8 +169,8 @@ public class YQAlertController: SwiftPopup {
                 maker.leading.trailing.equalTo(0)
             }
 
-        default:
-            break
+        case .custom(let view):
+            containerView.add(view)
         }
         flagIndex += 1
         
