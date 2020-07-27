@@ -9,8 +9,9 @@
 import UIKit
 import SwiftPopup
 import SnapKit
+import KeyboardMan
 
-public typealias YQAlertItemHandler = (YQAlertItem) -> ()
+public typealias YQAlertItemHandler = (Any) -> ()
 
 public enum YQAlertItem {
     case message(String)
@@ -57,10 +58,16 @@ public class YQAlertController: SwiftPopup {
     public var horizontalMargin: CGFloat = UIScreen.main.bounds.width / 5
     public var verticalMargin: CGFloat = UIScreen.main.bounds.height / 6
     public var contentInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+    public var adjustOffsetWhenKeyboardShown = true
+    public var spaceToKeyboard: CGFloat = 20
+    
+    private let keyboardMan = KeyboardMan()
     
     var alertTitle: String? = nil
     var items: [YQAlertItemWrapper] = []
     var flagIndex: Int = 0
+//    private var callbacks: [Int: YQAlertItemHandler] = [:]
+    
     private init(title: String?) {
         super.init()
         containerView = YQAlertContainer(contentInset: self.contentInsets)
@@ -105,9 +112,36 @@ public class YQAlertController: SwiftPopup {
             maker.trailing.greaterThanOrEqualTo(-self.horizontalMargin)
             maker.top.greaterThanOrEqualTo(self.verticalMargin).priority(.low)
             maker.bottom.greaterThanOrEqualTo(-self.verticalMargin).priority(.low)
-            maker.center.equalTo(self.view)
+            maker.center.equalToSuperview()
         }
         
+        keyboardMan.animateWhenKeyboardAppear = { [weak self] (_, height, increment) in
+            guard let self = self else {return}
+            guard self.adjustOffsetWhenKeyboardShown else {return}
+     
+            self.containerView.snp.remakeConstraints { (maker) in
+                maker.leading.greaterThanOrEqualTo(self.horizontalMargin)
+                maker.trailing.greaterThanOrEqualTo(-self.horizontalMargin)
+                maker.top.greaterThanOrEqualTo(self.verticalMargin).priority(.low)
+                maker.centerX.equalToSuperview()
+                maker.bottom.greaterThanOrEqualTo(-self.spaceToKeyboard - increment).priority(.low)
+            }
+            self.view.layoutIfNeeded()
+          
+        }
+
+        keyboardMan.animateWhenKeyboardDisappear = {[weak self] (_) in
+            guard let self = self else {return}
+            guard self.adjustOffsetWhenKeyboardShown else {return}
+            self.containerView.snp.remakeConstraints { (maker) in
+                maker.leading.greaterThanOrEqualTo(self.horizontalMargin)
+                maker.trailing.greaterThanOrEqualTo(-self.horizontalMargin)
+                maker.top.greaterThanOrEqualTo(self.verticalMargin).priority(.low)
+                maker.bottom.greaterThanOrEqualTo(-self.verticalMargin).priority(.low)
+                maker.center.equalToSuperview()
+            }
+            self.view.layoutIfNeeded()
+        }
     }
     
     public class func create(with title: String? = nil, items: YQAlertItem...) -> YQAlertController {
@@ -157,6 +191,7 @@ public class YQAlertController: SwiftPopup {
             containerView.add(button)
             button.tag = flagIndex
             
+            
         case .button(let title, _):
             let button = UIButton(type: .custom)
             button.setTitle(title, for: .normal)
@@ -177,29 +212,20 @@ public class YQAlertController: SwiftPopup {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 
 // MARK: - Action
 extension YQAlertController {
     @objc func buttonAction(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
+        
         let item = items[sender.tag].item
         switch item {
         case .radio(_, _, let handler):
-            handler?(item)
+            sender.isSelected = !sender.isSelected
+            handler?(sender)
         case .button(_, let handler):
-            handler?(item)
+            handler?(sender)
             self.dismiss()
         default:
             break

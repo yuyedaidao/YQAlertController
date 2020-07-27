@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		553CF2CF225B3BA500CE2D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553CF2CE225B3BA500CE2D27 /* Assets.xcassets */; };
+		55FA593C24CEC0320091F735 /* IMG_A53288E4E833-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 55FA593B24CEC0320091F735 /* IMG_A53288E4E833-1.jpeg */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		55EC456D225AE73900A67D5C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		55EC4570225AE73900A67D5C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		55EC4574225AE7A600A67D5C /* YQAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YQAlertController.swift; sourceTree = "<group>"; };
+		55FA593B24CEC0320091F735 /* IMG_A53288E4E833-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "IMG_A53288E4E833-1.jpeg"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* YQAlertController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQAlertController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				55FA593B24CEC0320091F735 /* IMG_A53288E4E833-1.jpeg */,
 				55EC456B225AE73900A67D5C /* YQAlertController */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for YQAlertController */,
@@ -284,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FA593C24CEC0320091F735 /* IMG_A53288E4E833-1.jpeg in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				553CF2CF225B3BA500CE2D27 /* Assets.xcassets in Resources */,
@@ -330,12 +334,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YQAlertController_Example/Pods-YQAlertController_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeyboardMan/KeyboardMan.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftPopup/SwiftPopup.framework",
 				"${BUILT_PRODUCTS_DIR}/YQAlertController/YQAlertController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeyboardMan.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPopup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YQAlertController.framework",

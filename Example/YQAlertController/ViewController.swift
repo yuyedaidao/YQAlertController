@@ -20,14 +20,33 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let alert = YQAlertController.create()
         let titleLabel = UILabel()
-               titleLabel.text = "新建文件夹"
-               titleLabel.textColor = UIColor(red: 63.0 / 255, green: 108.0 / 255, blue: 1, alpha: 1)
-        let alert = YQAlertController.create(with: "我是标题", items:.custom(titleLabel), .message("行不行的吧，你看着办，我靠，你竟然真看着办了，听我的，不办，明白了吗，什么，不明白，我靠，去玩泥巴"), .radio(false, "下次不再提醒", { (item) in
-            print("我是单选按钮")
+        titleLabel.text = "新建文件夹"
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = UIColor(red: 63.0 / 255, green: 108.0 / 255, blue: 1, alpha: 1)
+        alert.add(.custom(titleLabel))
+        titleLabel.snp.makeConstraints { (maker) in
+            maker.leading.trailing.equalToSuperview()
+        }
+        let inputTF = UITextField()
+        inputTF.borderStyle = .none
+        inputTF.leftViewMode = .always
+        inputTF.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 6, height: 4))
+        inputTF.backgroundColor = UIColor.lightGray.withAlphaComponent(0.2)
+        inputTF.clipsToBounds = true
+        inputTF.layer.cornerRadius = 5
+        alert.add(.custom(inputTF))
+        inputTF.snp.makeConstraints { (maker) in
+            maker.leading.trailing.equalToSuperview()
+            maker.height.equalTo(36)
+        }
+        alert.add(.radio(false, "设置为共享文件夹", { (item) in
+            
         }))
         
-        present(alert, animated: true, completion: nil)
+        alert.show()
+
     }
 
     override func didReceiveMemoryWarning() {

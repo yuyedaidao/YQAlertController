@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YQAlertController'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'YQAlertController.'
 
 # This description is used to generate tags and improve search results.
@@ -42,5 +42,6 @@ Pod::Spec.new do |s|
   # s.dependency 'RxCoreData', '~> 0.5.1'
   # s.dependency 'RxDataSources', '~> 3.0'
   s.dependency  'SwiftPopup'
+  s.dependency 'KeyboardMan'
 
 end
