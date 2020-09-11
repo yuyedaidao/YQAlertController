@@ -1,16 +1,16 @@
 PODS:
   - KeyboardMan (1.2.3)
-  - SnapKit (4.0.1)
-  - SwiftPopup (0.1.3):
-    - SnapKit
-  - YQAlertController (0.1.1):
+  - SnapKit (5.0.1)
+  - SwiftPopup (5.0.0):
+    - SnapKit (~> 5.0.0)
+  - YQAlertController (0.1.4):
     - KeyboardMan
-    - SnapKit (~> 4.0.0)
+    - SnapKit
     - SwiftPopup
 
 DEPENDENCIES:
   - KeyboardMan
-  - SnapKit (~> 4.0.0)
+  - SnapKit
   - SwiftPopup
   - YQAlertController (from `../`)
 
@@ -26,10 +26,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   KeyboardMan: b51e3209d41ff56f65459c9cf734a5f8c5443783
-  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  SwiftPopup: 4653df10cee2cc73423ce58235747abaef737b04
-  YQAlertController: 91a5296ae1ee88dd8437043f4c09ceb1c4b81248
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftPopup: 31874508c0d91788edf71419a5bbeb3ebd498ab9
+  YQAlertController: 02f077d228ce036875bfa6d19b4dfe47bbeabdd7
 
-PODFILE CHECKSUM: 4d2fe8dc51c15597d6088ab7444e398370812ca9
+PODFILE CHECKSUM: 8b763a23f8e3a6c17ee7b5c6e8b744d189569e54
 
 COCOAPODS: 1.9.3
