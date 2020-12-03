@@ -60,6 +60,7 @@ public class YQAlertController: SwiftPopup {
     public var contentInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
     public var adjustOffsetWhenKeyboardShown = true
     public var spaceToKeyboard: CGFloat = 20
+    public var dismissWhenTappedEmptySpace = false
     public var alignment: UIStackView.Alignment = .leading {
         didSet {
             containerView.stack.alignment = alignment
@@ -147,6 +148,15 @@ public class YQAlertController: SwiftPopup {
                 maker.center.equalToSuperview()
             }
             self.view.layoutIfNeeded()
+        }
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissAction))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissAction() {
+        if dismissWhenTappedEmptySpace {
+            dismiss(animated: true, completion: nil)
         }
     }
     
