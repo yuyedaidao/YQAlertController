@@ -60,7 +60,7 @@ public class YQAlertController: SwiftPopup {
     public var contentInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
     public var adjustOffsetWhenKeyboardShown = true
     public var spaceToKeyboard: CGFloat = 20
-    
+    public var alignment: UIStackView.Alignment = .leading
     /// 视图展示前(viewDidLoad中)是否增加取消按钮
     public var appendCancelButton = true
     private let keyboardMan = KeyboardMan()
@@ -73,7 +73,7 @@ public class YQAlertController: SwiftPopup {
     private init(title: String?) {
         super.init()
         containerView = YQAlertContainer(contentInset: self.contentInsets)
-
+        containerView.stack.alignment = alignment
         if let title = title {
             let label = UILabel()
             label.textColor = UIColor.darkText
