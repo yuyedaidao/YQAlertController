@@ -156,7 +156,7 @@ public class YQAlertController: SwiftPopup {
     
     @objc func dismissAction() {
         if dismissWhenTappedEmptySpace {
-            dismiss(animated: true, completion: nil)
+            dismiss(completion: nil)
         }
     }
     
