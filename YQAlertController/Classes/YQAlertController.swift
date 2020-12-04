@@ -29,8 +29,16 @@ class YQAlertItemWrapper {
 }
 
 class YQAlertContainer: UIView {
+    var contentInset: UIEdgeInsets = UIEdgeInsets.zero {
+        didSet {
+            stack.snp.updateConstraints { (maker) in
+                maker.edges.equalTo(contentInset)
+            }
+        }
+    }
     let stack = UIStackView()
     init(contentInset: UIEdgeInsets) {
+        self.contentInset = contentInset
         super.init(frame: CGRect.zero)
         stack.alignment = .leading
         stack.axis = .vertical
@@ -57,7 +65,11 @@ public class YQAlertController: SwiftPopup {
     var containerView: YQAlertContainer!
     public var horizontalMargin: CGFloat = UIScreen.main.bounds.width / 5
     public var verticalMargin: CGFloat = UIScreen.main.bounds.height / 6
-    public var contentInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+    public var contentInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15) {
+        didSet {
+            containerView.contentInset = contentInsets
+        }
+    }
     public var adjustOffsetWhenKeyboardShown = true
     public var spaceToKeyboard: CGFloat = 20
     public var dismissWhenTappedEmptySpace = false
@@ -73,7 +85,6 @@ public class YQAlertController: SwiftPopup {
     var alertTitle: String? = nil
     var items: [YQAlertItemWrapper] = []
     var flagIndex: Int = 0
-//    private var callbacks: [Int: YQAlertItemHandler] = [:]
     
     private init(title: String?) {
         super.init()
@@ -85,7 +96,6 @@ public class YQAlertController: SwiftPopup {
             label.text = title
             label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
             label.textAlignment = .center
-//            label.translatesAutoresizingMaskIntoConstraints = false
             containerView.add(label)
             label.snp.makeConstraints { (maker) in
                 maker.leading.trailing.equalTo(0)
