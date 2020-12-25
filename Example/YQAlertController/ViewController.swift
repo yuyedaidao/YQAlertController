@@ -16,10 +16,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         view.backgroundColor = UIColor.orange
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showAlert))
+        tap.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tap)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func showAlert() {
         let alert = YQAlertController.create()
         let titleLabel = UILabel()
         titleLabel.text = "新建文件夹"
@@ -44,14 +57,9 @@ class ViewController: UIViewController {
         alert.add(.radio(false, "设置为共享文件夹", { (item) in
             
         }))
-        
+        alert.dismissWhenTappedEmptySpace =  true
         alert.show()
 
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }

@@ -160,11 +160,25 @@ public class YQAlertController: SwiftPopup {
             self.view.layoutIfNeeded()
         }
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissAction))
-        view.addGestureRecognizer(tap)
+        if dismissWhenTappedEmptySpace {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(dismissAction))
+            view.addGestureRecognizer(tap)
+            containerView.isUserInteractionEnabled = true
+            let temp = UITapGestureRecognizer(target: self, action: #selector(cancelTouch))
+            containerView.addGestureRecognizer(temp)
+        }
+    }
+    
+    @objc func cancelTouch() {
+        #if DEBUG
+        print("cancel touch")
+        #endif
     }
     
     @objc func dismissAction() {
+        #if DEBUG
+        print("dismiss action")
+        #endif
         if dismissWhenTappedEmptySpace {
             dismiss(completion: nil)
         }
@@ -237,7 +251,6 @@ public class YQAlertController: SwiftPopup {
         
     }
     
-
 }
 
 

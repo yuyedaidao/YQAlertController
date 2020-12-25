@@ -13,6 +13,8 @@ target 'YQAlertController_Example' do
   #pod 'RxDataSources', '~> 3.0'
   pod 'KeyboardMan'
   pod 'SwiftPopup'
+  pod 'LookinServer'
+
   target 'YQAlertController_Tests' do
     inherit! :search_paths
 

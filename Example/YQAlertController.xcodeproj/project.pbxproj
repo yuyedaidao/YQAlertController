@@ -335,6 +335,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YQAlertController_Example/Pods-YQAlertController_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KeyboardMan/KeyboardMan.framework",
+				"${PODS_ROOT}/LookinServer/LookinServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftPopup/SwiftPopup.framework",
 				"${BUILT_PRODUCTS_DIR}/YQAlertController/YQAlertController.framework",
@@ -342,6 +343,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeyboardMan.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPopup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YQAlertController.framework",
