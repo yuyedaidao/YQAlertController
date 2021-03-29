@@ -96,6 +96,7 @@ public class YQAlertController: SwiftPopup {
             label.text = title
             label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
             label.textAlignment = .center
+            label.numberOfLines = 0
             containerView.add(label)
             label.snp.makeConstraints { (maker) in
                 maker.leading.trailing.equalTo(0)
