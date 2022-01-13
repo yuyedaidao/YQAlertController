@@ -57,6 +57,7 @@ class ViewController: UIViewController {
         alert.add(.radio(false, "设置为共享文件夹", { (item) in
             
         }))
+        alert.add(.seperation(nil))
         alert.dismissWhenTappedEmptySpace =  true
         alert.show()
 

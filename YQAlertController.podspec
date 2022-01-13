@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YQAlertController'
-  s.version          = '0.2.5'
+  s.version          = '0.2.7'
   s.summary          = 'YQAlertController.'
 
 # This description is used to generate tags and improve search results.
@@ -30,13 +30,14 @@ Pod::Spec.new do |s|
 
   s.source_files = 'YQAlertController/Classes/**/*'
   s.swift_versions = '5.0'
-#  s.resource_bundles = {
-#    'YQAlertController' => ['YQAlertController/Assets/*']
-#  }
-  s.resources = ['YQAlertController/Assets/*.*']
+  s.resource_bundles = {
+    'YQAlertController' => ['YQAlertController/Assets/*']
+  }
+#  s.resources = ['YQAlertController/Assets/*.*']
 
   s.dependency 'SnapKit'
   s.dependency  'SwiftPopup'
   s.dependency 'KeyboardMan'
+  s.dependency 'YQLineView'
 
 end

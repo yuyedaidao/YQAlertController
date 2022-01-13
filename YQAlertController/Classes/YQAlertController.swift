@@ -10,6 +10,7 @@ import UIKit
 import SwiftPopup
 import SnapKit
 import KeyboardMan
+import YQLineView
 
 public typealias YQAlertItemHandler = (Any) -> ()
 
@@ -19,6 +20,7 @@ public enum YQAlertItem {
     case radio(Bool,String,YQAlertItemHandler?)
     case button(String, YQAlertItemHandler?)
     case custom(UIView)
+    case seperation(Bool?/*是否取消边距*/)
 }
 
 class YQAlertItemWrapper {
@@ -101,7 +103,6 @@ public class YQAlertController: SwiftPopup {
             label.snp.makeConstraints { (maker) in
                 maker.leading.trailing.equalTo(0)
             }
-            
         }
     }
     
@@ -207,8 +208,6 @@ public class YQAlertController: SwiftPopup {
             label.snp.makeConstraints { (maker) in
                 maker.leading.trailing.equalTo(0)
             }
-
-            
         case .image(let image, let size):
             let imgView = UIImageView(image: image)
             imgView.contentMode = .scaleAspectFit
@@ -231,8 +230,6 @@ public class YQAlertController: SwiftPopup {
             button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
             containerView.add(button)
             button.tag = flagIndex
-            
-            
         case .button(let title, _):
             let button = UIButton(type: .custom)
             button.setTitle(title, for: .normal)
@@ -244,14 +241,32 @@ public class YQAlertController: SwiftPopup {
             button.snp.makeConstraints { (maker) in
                 maker.leading.trailing.equalTo(0)
             }
-
         case .custom(let view):
             containerView.add(view)
+            view.tag = flagIndex
+        case .seperation(let disableMargin):
+            let line = YQLineView()
+            line.color = UIColor(red: 0.929, green: 0.929, blue: 0.929, alpha: 1)
+            containerView.add(line)
+            line.snp.makeConstraints { make in
+                make.height.equalTo(1)
+                if let disableMargin = disableMargin, disableMargin {
+                    make.leading.equalTo(-horizontalMargin)
+                    make.trailing.equalTo(horizontalMargin)
+                } else {
+                    make.width.equalToSuperview()
+                }
+            }
+            line.tag = flagIndex
         }
         flagIndex += 1
         
     }
     
+    public func itemView<T>(_ index: Int) -> T? {
+        let view = containerView.stack.arrangedSubviews[index] as? T
+        return view
+    }
 }
 
 

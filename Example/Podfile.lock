@@ -4,10 +4,12 @@ PODS:
   - SnapKit (5.0.1)
   - SwiftPopup (5.0.0):
     - SnapKit (~> 5.0.0)
-  - YQAlertController (0.2.2):
+  - YQAlertController (0.2.6):
     - KeyboardMan
     - SnapKit
     - SwiftPopup
+    - YQLineView
+  - YQLineView (0.1.4)
 
 DEPENDENCIES:
   - KeyboardMan
@@ -17,6 +19,8 @@ DEPENDENCIES:
   - YQAlertController (from `../`)
 
 SPEC REPOS:
+  https://gitee.com/padding/YQPods.git:
+    - YQLineView
   https://github.com/CocoaPods/Specs.git:
     - KeyboardMan
     - LookinServer
@@ -32,8 +36,9 @@ SPEC CHECKSUMS:
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftPopup: 31874508c0d91788edf71419a5bbeb3ebd498ab9
-  YQAlertController: b2d50f2a46f0150d1e14b067181e3fb5fd14b63e
+  YQAlertController: aac5f8e8e137d831ae6c8e89ace9b93769878863
+  YQLineView: 5cb9283152a1cbe9842d490b5acde773695b63db
 
 PODFILE CHECKSUM: f3937528578df5f2edab2f3b51b54b473794188c
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.3
