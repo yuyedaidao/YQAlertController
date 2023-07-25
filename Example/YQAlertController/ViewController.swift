@@ -58,6 +58,9 @@ class ViewController: UIViewController {
             
         }))
         alert.add(.seperation(nil))
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 12
+        alert.add(.attributedMessage(NSAttributedString(string: "我要是展示不同的行间距，请看一看看，哈哈哈昂昂昂", attributes: [.font : UIFont.systemFont(ofSize: 16), .foregroundColor : UIColor.purple, .paragraphStyle: paragraphStyle])))
         alert.dismissWhenTappedEmptySpace =  true
         alert.show()
 

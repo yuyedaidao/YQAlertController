@@ -16,6 +16,7 @@ public typealias YQAlertItemHandler = (Any) -> ()
 
 public enum YQAlertItem {
     case message(String)
+    case attributedMessage(NSAttributedString)
     case image(UIImage, CGSize?)
     case radio(Bool,String,YQAlertItemHandler?)
     case button(String, YQAlertItemHandler?)
@@ -258,6 +259,15 @@ public class YQAlertController: SwiftPopup {
                 }
             }
             line.tag = flagIndex
+        case .attributedMessage(let message):
+            let label = UILabel()
+            label.attributedText = message
+            label.numberOfLines = 0
+            containerView.add(label)
+            label.tag = flagIndex
+            label.snp.makeConstraints { (maker) in
+                maker.leading.trailing.equalTo(0)
+            }
         }
         flagIndex += 1
         
