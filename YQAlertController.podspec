@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
 #  s.resources = ['YQAlertController/Assets/*.*']
 
   s.dependency 'SnapKit'
-  s.dependency  'SwiftPopup'
+  s.dependency 'SwiftPopup'
   s.dependency 'KeyboardMan'
   s.dependency 'YQLineView'
 
